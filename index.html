@@ -214,8 +214,8 @@
             { title: "Current Time", info: "4:16 PM." },
             { title: "Address of Origin", info: "2795 Estates Dr, Park City, UT 84060." },
             { title: "Address of Destination", info: "1170 E 2700 S, Salt Lake City, UT 84106." },
-            { title: "Distance to Destination", info: "28.8" },
-            { title: "Estimated Time to Destination", info: "40" },
+            { title: "Distance to Destination", info: "26.67 miles." },
+            { title: "Estimated Time to Destination", info: "38 minutes." },
             { title: "State of Charge of Battery", info: "26% charge." },
             { title: "Range of Current Battery", info: "78 minutes." },
             { title: "Estimated Drive Distance with Current Charge", info: "58.5 miles." },
@@ -233,10 +233,10 @@
                 name: 'RMP Kimball Junction',
 
                 location: '6490 N Landmark Dr, Park City, UT 84098, USA',
-                originDistance: ' Miles',
-                originTime: ' Minutes',
-                destDistance: ' Miles ',
-                destTime: ' Minutes',
+                originDistance: '6.52',
+                originTime: '15',
+                destDistance: '20.42',
+                destTime: '24',
 
                 waitTime: [
                         { type: 'CCS1', value: '0' }
@@ -272,10 +272,10 @@
                 name: 'Park City Library',
 
                 location: '1215 Park Ave, Park City, UT 84060, USA',
-                originDistance: ' Miles',
-                originTime: ' Minutes',
-                destDistance: ' Miles ',
-                destTime: ' Minutes',
+                originDistance: '3.1',
+                originTime: '10',
+                destDistance: '26.37',
+                destTime: '34',
 
                 
                 waitTime: [
@@ -938,8 +938,8 @@ function generateBoxContent(station, boxId) {
         // Add route time/distance to instructions & update charging station details
         map.on('load', async () => {
             await getRoute(0); // Ensure this is awaited properly
-            await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
-            await updateChargingStationDetails();  // Ensure this is awaited properly
+            // await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
+            // await updateChargingStationDetails();  // Ensure this is awaited properly
             addChargingStations();  // You might need to re-add stations to reflect updated data
         });
 
